@@ -43,3 +43,36 @@ CREATE TABLE IF NOT EXISTS copies (
     FOREIGN KEY (book_id) REFERENCES books(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE IF NOT EXISTS loans (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    copy_id INT NOT NULL,
+    user_id INT NOT NULL,
+    librarian_id INT NULL,
+    issued_at DATE NOT NULL,
+    due_at DATE NOT NULL,
+    returned_at DATE NULL,
+    fine DECIMAL(8,2) NOT NULL DEFAULT 0,
+    FOREIGN KEY (copy_id) REFERENCES copies(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS reservations (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT NOT NULL,
+    user_id INT NOT NULL,
+    created_at DATETIME NOT NULL,
+    status ENUM('active', 'done', 'cancelled') NOT NULL DEFAULT 'active',
+    FOREIGN KEY (book_id) REFERENCES books(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE IF NOT EXISTS reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    book_id INT NOT NULL,
+    user_id INT NOT NULL,
+    rating INT NOT NULL,
+    text TEXT NOT NULL,
+    created_at DATETIME NOT NULL,
+    FOREIGN KEY (book_id) REFERENCES books(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

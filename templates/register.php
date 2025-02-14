@@ -20,7 +20,7 @@
             </select>
         </label>
         <label>Группа (для студентов)
-            <input type="text" name="group_name" maxlength="20" placeholder="ИСПО332">
+            <input type="text" name="group_name" maxlength="20" pattern="[А-ЯA-Z]{2,5}[0-9]{3}" placeholder="ИСПО332">
         </label>
         <label>Телефон
             <input type="tel" name="phone" maxlength="20" placeholder="+7 900 000-00-00">

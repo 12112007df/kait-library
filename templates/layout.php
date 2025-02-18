@@ -13,6 +13,9 @@
         <a href="index.php?page=catalog">Каталог</a>
         <?php if ($user): ?>
             <a href="index.php?page=profile">Мои книги</a>
+            <?php if (in_array($user['role'], ['librarian', 'admin'])): ?>
+                <a href="index.php?page=librarian">Выдача</a>
+            <?php endif; ?>
             <span class="user-name"><?= e($user['full_name']) ?></span>
             <a href="index.php?page=logout" class="btn btn-light">Выйти</a>
         <?php else: ?>

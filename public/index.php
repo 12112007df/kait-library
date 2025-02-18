@@ -57,6 +57,15 @@ switch ($page) {
         redirect('catalog');
         break;
 
+    case 'librarian':
+        Auth::requireRole(['librarian', 'admin']);
+        render('librarian', [
+            'title' => 'Выдача и возврат',
+            'loans' => LoanService::activeLoans(),
+            'stats' => ReportService::stats(),
+        ]);
+        break;
+
     default:
         http_response_code(404);
         render('error', ['title' => 'Не найдено', 'message' => 'Страница не найдена']);

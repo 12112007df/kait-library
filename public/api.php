@@ -34,6 +34,15 @@ try {
             json_response(['ok' => true, 'book' => $book]);
             break;
 
+        case 'loan.issue':
+            if (!Auth::check()) {
+                json_error('Нужно войти', 401);
+            }
+            $data = request_json();
+            $result = LoanService::issue($data['email'] ?? '', $data['inventory'] ?? '', Auth::user()['id']);
+            json_response($result, $result['ok'] ? 200 : 422);
+            break;
+
         default:
             json_error('Неизвестное действие', 404);
     }

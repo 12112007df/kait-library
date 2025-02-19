@@ -43,6 +43,15 @@ try {
             json_response($result, $result['ok'] ? 200 : 422);
             break;
 
+        case 'loan.return':
+            if (!Auth::hasRole(['librarian', 'admin'])) {
+                json_error('Доступ запрещён', 403);
+            }
+            $data = request_json();
+            $result = LoanService::returnBook((int)$data['loan_id']);
+            json_response($result, $result['ok'] ? 200 : 422);
+            break;
+
         default:
             json_error('Неизвестное действие', 404);
     }

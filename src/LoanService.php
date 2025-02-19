@@ -57,4 +57,54 @@ class LoanService
             'warnings' => $warnings,
         ];
     }
+
+    /**
+     * Принять книгу обратно, начислить штраф за просрочку.
+     */
+    public static function returnBook($loanId)
+    {
+        $loan = Database::fetchOne(
+            'SELECT l.*, u.category FROM loans l JOIN users u ON u.id = l.user_id WHERE l.id = ?',
+            [$loanId]
+        );
+        if (!$loan) {
+            return ['ok' => false, 'message' => 'Выдача не найдена'];
+        }
+        if ($loan['returned_at']) {
+            return ['ok' => false, 'message' => 'Книга уже возвращена'];
+        }
+
+        $fine = 0;
+        $today = strtotime(date('Y-m-d'));
+        $due = strtotime($loan['due_at']);
+        if ($today > $due) {
+            $daysLate = floor(($today - $due) / 86400);
+            $fine = $daysLate * FINE_PER_DAY;
+        }
+
+        Database::execute(
+            'UPDATE loans SET returned_at = ?, fine = ? WHERE id = ?',
+            [date('Y-m-d'), $fine, $loanId]
+        );
+        Database::execute("UPDATE copies SET status = 'available' WHERE id = ?", [$loan['copy_id']]);
+
+        $msg = 'Книга принята';
+        if ($fine > 0) {
+            $msg .= '. Штраф: ' . $fine . ' руб.';
+        }
+        return ['ok' => true, 'message' => $msg, 'fine' => $fine];
+    }
+
+    public static function activeLoans()
+    {
+        return Database::fetchAll(
+            'SELECT l.*, u.full_name, u.email, b.title, c.inventory_number
+             FROM loans l
+             JOIN users u ON u.id = l.user_id
+             JOIN copies c ON c.id = l.copy_id
+             JOIN books b ON b.id = c.book_id
+             WHERE l.returned_at IS NULL
+             ORDER BY l.due_at'
+        );
+    }
 }

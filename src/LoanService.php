@@ -77,7 +77,7 @@ class LoanService
         $fine = 0;
         $today = strtotime(date('Y-m-d'));
         $due = strtotime($loan['due_at']);
-        if ($today > $due) {
+        if ($today > $due && $loan['category'] == 'student') {
             $daysLate = floor(($today - $due) / 86400);
             $fine = $daysLate * FINE_PER_DAY;
         }

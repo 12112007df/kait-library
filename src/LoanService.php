@@ -107,4 +107,17 @@ class LoanService
              ORDER BY l.due_at'
         );
     }
+
+    public static function userLoans($userId)
+    {
+        return Database::fetchAll(
+            'SELECT l.*, b.title, b.author, c.inventory_number
+             FROM loans l
+             JOIN copies c ON c.id = l.copy_id
+             JOIN books b ON b.id = c.book_id
+             WHERE l.user_id = ?
+             ORDER BY l.issued_at DESC',
+            [$userId]
+        );
+    }
 }

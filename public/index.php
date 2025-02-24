@@ -57,6 +57,15 @@ switch ($page) {
         redirect('catalog');
         break;
 
+    case 'profile':
+        Auth::requireLogin();
+        $user = Auth::user();
+        render('profile', [
+            'title' => 'Личный кабинет',
+            'loans' => LoanService::userLoans($user['id']),
+        ]);
+        break;
+
     case 'librarian':
         Auth::requireRole(['librarian', 'admin']);
         render('librarian', [

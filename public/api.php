@@ -52,6 +52,13 @@ try {
             json_response($result, $result['ok'] ? 200 : 422);
             break;
 
+        case 'loans.my':
+            if (!Auth::check()) {
+                json_error('Нужно войти', 401);
+            }
+            json_response(['ok' => true, 'items' => LoanService::userLoans(Auth::user()['id'])]);
+            break;
+
         default:
             json_error('Неизвестное действие', 404);
     }

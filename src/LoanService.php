@@ -35,6 +35,19 @@ class LoanService
             }
         }
 
+        // просроченные книги
+        $overdue = Database::fetchOne(
+            'SELECT COUNT(*) AS cnt FROM loans WHERE user_id = ? AND returned_at IS NULL AND due_at < ?',
+            [$reader['id'], date('Y-m-d')]
+        );
+        if ($overdue['cnt'] > 0) {
+            if ($reader['category'] == 'student') {
+                return ['ok' => false, 'message' => 'У читателя есть просроченные книги'];
+            } else {
+                $warnings[] = 'У читателя есть просроченные книги (' . $overdue['cnt'] . ')';
+            }
+        }
+
         // срок возврата
         if ($reader['category'] == 'student') {
             $days = LOAN_DAYS_STUDENT;

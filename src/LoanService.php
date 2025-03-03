@@ -35,6 +35,20 @@ class LoanService
             }
         }
 
+        // лимит книг на руках
+        $active = Database::fetchOne(
+            'SELECT COUNT(*) AS cnt FROM loans WHERE user_id = ? AND returned_at IS NULL',
+            [$reader['id']]
+        );
+        if ($reader['category'] == 'student') {
+            $limit = MAX_BOOKS_STUDENT;
+        } else {
+            $limit = MAX_BOOKS_TEACHER;
+        }
+        if ($active['cnt'] > $limit) {
+            return ['ok' => false, 'message' => 'Превышен лимит книг на руках (' . $limit . ')'];
+        }
+
         // просроченные книги
         $overdue = Database::fetchOne(
             'SELECT COUNT(*) AS cnt FROM loans WHERE user_id = ? AND returned_at IS NULL AND due_at < ?',

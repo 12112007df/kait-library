@@ -2,6 +2,15 @@
 const issueForm = document.getElementById('issue-form');
 const issueResult = document.getElementById('issue-result');
 
+async function loadReaders() {
+    const data = await api('readers');
+    if (!data.ok) return;
+    const list = document.getElementById('readers');
+    list.innerHTML = data.items
+        .map((r) => `<option value="${escapeHtml(r.email)}">${escapeHtml(r.full_name)} ${escapeHtml(r.group_name || '')}</option>`)
+        .join('');
+}
+
 issueForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('reader-email').value.trim();
@@ -34,3 +43,4 @@ document.querySelectorAll('.return-btn').forEach((btn) => {
     });
 });
 
+loadReaders();

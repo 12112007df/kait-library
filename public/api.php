@@ -59,6 +59,13 @@ try {
             json_response(['ok' => true, 'items' => LoanService::userLoans(Auth::user()['id'])]);
             break;
 
+        case 'readers':
+            if (!Auth::hasRole(['librarian', 'admin'])) {
+                json_error('Доступ запрещён', 403);
+            }
+            json_response(['ok' => true, 'items' => UserRepository::readers()]);
+            break;
+
         default:
             json_error('Неизвестное действие', 404);
     }

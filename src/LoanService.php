@@ -69,6 +69,12 @@ class LoanService
             $days = LOAN_DAYS_TEACHER;
         }
         $due = strtotime('+' . $days . ' days');
+        $weekday = (int)date('w', $due);
+        if ($weekday == 0) {
+            $due = strtotime('+1 day', $due);
+        } elseif ($weekday == 6) {
+            $due = strtotime('+2 days', $due);
+        }
         $dueAt = date('Y-m-d', $due);
 
         Database::insert(

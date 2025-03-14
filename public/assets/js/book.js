@@ -3,6 +3,10 @@ const page = document.querySelector('.book-page');
 const bookId = page.dataset.bookId;
 const reviewsEl = document.getElementById('reviews');
 
+function stars(n) {
+    return '★'.repeat(n) + '☆'.repeat(5 - n);
+}
+
 async function loadReviews() {
     const data = await api('reviews.list', { params: { book_id: bookId } });
     if (!data.ok) return;
@@ -16,7 +20,7 @@ async function loadReviews() {
             <div class="review">
                 <div class="review-head">
                     <b>${r.full_name}</b>
-                    <span>${r.rating}/5</span>
+                    <span class="stars">${stars(r.rating)}</span>
                     <span class="muted">${formatDate(r.created_at)}</span>
                 </div>
                 <div class="review-text">${r.text}</div>

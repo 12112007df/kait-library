@@ -34,6 +34,24 @@ try {
             json_response(['ok' => true, 'book' => $book]);
             break;
 
+        case 'reviews.list':
+            json_response(['ok' => true, 'items' => ReviewRepository::forBook((int)$_GET['book_id'])]);
+            break;
+
+        case 'reviews.add':
+            if (!Auth::check()) {
+                json_error('Нужно войти', 401);
+            }
+            $data = request_json();
+            $id = ReviewRepository::add(
+                (int)$data['book_id'],
+                Auth::user()['id'],
+                $data['rating'],
+                $data['text']
+            );
+            json_response(['ok' => true, 'id' => $id]);
+            break;
+
         case 'loan.issue':
             if (!Auth::check()) {
                 json_error('Нужно войти', 401);

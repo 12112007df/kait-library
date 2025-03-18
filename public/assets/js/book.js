@@ -55,4 +55,13 @@ if (reviewForm) {
     });
 }
 
+const reserveBtn = document.getElementById('reserve-btn');
+if (reserveBtn) {
+    reserveBtn.addEventListener('click', async () => {
+        const data = await api('reserve', { method: 'POST', body: { book_id: bookId } });
+        document.getElementById('reserve-msg').textContent = data.message || data.error;
+        if (data.ok) reserveBtn.disabled = true;
+    });
+}
+
 loadReviews();

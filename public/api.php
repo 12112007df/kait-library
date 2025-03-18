@@ -52,6 +52,14 @@ try {
             json_response(['ok' => true, 'id' => $id]);
             break;
 
+        case 'reserve':
+            if (!Auth::check()) {
+                json_error('Нужно войти', 401);
+            }
+            $data = request_json();
+            json_response(LoanService::reserve((int)$data['book_id'], Auth::user()['id']));
+            break;
+
         case 'loan.issue':
             if (!Auth::check()) {
                 json_error('Нужно войти', 401);

@@ -62,6 +62,27 @@ class LoanService
             }
         }
 
+        // бронирования: свободный экземпляр нельзя выдать, если его ждут другие
+        $reservations = Database::fetchAll(
+            "SELECT * FROM reservations WHERE book_id = ? AND status = 'active' ORDER BY created_at",
+            [$copy['book_id']]
+        );
+        $ownReservation = null;
+        $othersBefore = 0;
+        foreach ($reservations as $r) {
+            if ($r['user_id'] == $reader['id']) {
+                $ownReservation = $r;
+                break;
+            }
+            $othersBefore++;
+        }
+        if ($othersBefore > 0) {
+            $available = BookRepository::availableCount($copy['book_id']);
+            if ($available <= $othersBefore) {
+                return ['ok' => false, 'message' => 'Все свободные экземпляры забронированы другими читателями'];
+            }
+        }
+
         // срок возврата
         if ($reader['category'] == 'student') {
             $days = LOAN_DAYS_STUDENT;
@@ -82,6 +103,9 @@ class LoanService
             [$copy['id'], $reader['id'], $librarianId, date('Y-m-d'), $dueAt]
         );
         Database::execute("UPDATE copies SET status = 'issued' WHERE id = ?", [$copy['id']]);
+        if ($ownReservation) {
+            Database::execute("UPDATE reservations SET status = 'done' WHERE id = ?", [$ownReservation['id']]);
+        }
 
         return [
             'ok' => true,
@@ -126,6 +150,22 @@ class LoanService
             $msg .= '. Штраф: ' . $fine . ' руб.';
         }
         return ['ok' => true, 'message' => $msg, 'fine' => $fine];
+    }
+
+    public static function reserve($bookId, $userId)
+    {
+        $exists = Database::fetchOne(
+            "SELECT id FROM reservations WHERE book_id = ? AND user_id = ? AND status = 'active'",
+            [$bookId, $userId]
+        );
+        if ($exists) {
+            return ['ok' => false, 'message' => 'Вы уже забронировали эту книгу'];
+        }
+        Database::insert(
+            "INSERT INTO reservations (book_id, user_id, created_at, status) VALUES (?, ?, ?, 'active')",
+            [$bookId, $userId, date('Y-m-d H:i:s')]
+        );
+        return ['ok' => true, 'message' => 'Книга забронирована'];
     }
 
     public static function activeLoans()

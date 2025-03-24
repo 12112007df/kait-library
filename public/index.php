@@ -71,8 +71,18 @@ switch ($page) {
         render('librarian', [
             'title' => 'Выдача и возврат',
             'loans' => LoanService::activeLoans(),
-            'stats' => ReportService::stats(),
         ]);
+        break;
+
+    case 'debtors':
+        Auth::requireRole(['librarian', 'admin']);
+        if (isset($_GET['export'])) {
+            header('Content-Type: text/csv; charset=utf-8');
+            header('Content-Disposition: attachment; filename="debtors.csv"');
+            echo ReportService::debtorsCsv();
+            exit;
+        }
+        render('debtors', ['title' => 'Должники', 'debtors' => ReportService::debtors()]);
         break;
 
     default:

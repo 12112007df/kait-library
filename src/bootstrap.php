@@ -9,6 +9,7 @@ require_once __DIR__ . '/BookRepository.php';
 require_once __DIR__ . '/LoanService.php';
 require_once __DIR__ . '/ReviewRepository.php';
 require_once __DIR__ . '/UserRepository.php';
+require_once __DIR__ . '/ReportService.php';
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

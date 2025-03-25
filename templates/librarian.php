@@ -1,6 +1,13 @@
 <?php $scripts = ['librarian']; ?>
 <h1>Выдача и возврат</h1>
 
+<div class="stats">
+    <div><b><?= $stats['books'] ?></b><span>книг</span></div>
+    <div><b><?= $stats['copies'] ?></b><span>экземпляров</span></div>
+    <div><b><?= $stats['readers'] ?></b><span>читателей</span></div>
+    <div><b><?= $stats['active_loans'] ?></b><span>на руках</span></div>
+</div>
+
 <section class="card">
     <h2>Выдать книгу</h2>
     <form id="issue-form" class="inline-form">

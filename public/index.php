@@ -71,6 +71,7 @@ switch ($page) {
         render('librarian', [
             'title' => 'Выдача и возврат',
             'loans' => LoanService::activeLoans(),
+            'stats' => ReportService::stats(),
         ]);
         break;
 

@@ -72,4 +72,14 @@ class ReportService
 		rewind($out);
 		return stream_get_contents($out);
 	}
+
+	public static function stats()
+	{
+		return [
+			'books' => Database::fetchOne('SELECT COUNT(*) AS cnt FROM books')['cnt'],
+			'copies' => Database::fetchOne('SELECT COUNT(*) AS cnt FROM copies')['cnt'],
+			'readers' => Database::fetchOne("SELECT COUNT(*) AS cnt FROM users WHERE role = 'reader'")['cnt'],
+			'active_loans' => Database::fetchOne('SELECT COUNT(*) AS cnt FROM loans WHERE returned_at IS NULL')['cnt'],
+		];
+	}
 }

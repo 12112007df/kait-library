@@ -92,6 +92,24 @@ try {
             json_response(['ok' => true, 'items' => UserRepository::readers()]);
             break;
 
+        case 'user.role':
+            if (!Auth::hasRole('admin')) {
+                json_error('Доступ запрещён', 403);
+            }
+            $data = request_json();
+            UserRepository::setRole((int)$data['user_id'], $data['role']);
+            json_response(['ok' => true]);
+            break;
+
+        case 'user.block':
+            if (!Auth::hasRole('admin')) {
+                json_error('Доступ запрещён', 403);
+            }
+            $data = request_json();
+            UserRepository::setBlocked((int)$data['user_id'], !empty($data['blocked']));
+            json_response(['ok' => true]);
+            break;
+
         default:
             json_error('Неизвестное действие', 404);
     }

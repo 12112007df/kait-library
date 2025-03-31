@@ -86,6 +86,11 @@ switch ($page) {
         render('debtors', ['title' => 'Должники', 'debtors' => ReportService::debtors()]);
         break;
 
+    case 'admin_users':
+        Auth::requireRole('admin');
+        render('admin_users', ['title' => 'Пользователи', 'users' => UserRepository::all()]);
+        break;
+
     default:
         http_response_code(404);
         render('error', ['title' => 'Не найдено', 'message' => 'Страница не найдена']);

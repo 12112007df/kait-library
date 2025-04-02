@@ -91,6 +91,31 @@ switch ($page) {
         render('admin_users', ['title' => 'Пользователи', 'users' => UserRepository::all()]);
         break;
 
+    case 'admin_books':
+        Auth::requireRole(['admin', 'librarian']);
+        $message = null;
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $v = new Validator($_POST);
+            $v->required('title')->required('author');
+            if ($v->fails()) {
+                $message = $v->first();
+            } else {
+                $bookId = BookRepository::create($_POST);
+                $copies = (int)($_POST['copies'] ?? 1);
+                for ($i = 1; $i <= $copies; $i++) {
+                    BookRepository::addCopy($bookId, 'INV-' . $bookId . '-' . $i);
+                }
+                $message = 'Книга добавлена';
+            }
+        }
+        render('admin_books', [
+            'title' => 'Книги',
+            'genres' => BookRepository::genres(),
+            'books' => BookRepository::search(),
+            'message' => $message,
+        ]);
+        break;
+
     default:
         http_response_code(404);
         render('error', ['title' => 'Не найдено', 'message' => 'Страница не найдена']);

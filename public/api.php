@@ -92,6 +92,19 @@ try {
             json_response(['ok' => true, 'items' => UserRepository::readers()]);
             break;
 
+        case 'cover.upload':
+            if (!Auth::hasRole(['librarian', 'admin'])) {
+                json_error('Доступ запрещён', 403);
+            }
+            if (empty($_FILES['cover'])) {
+                json_error('Файл не передан');
+            }
+            $name = $_FILES['cover']['name'];
+            move_uploaded_file($_FILES['cover']['tmp_name'], UPLOAD_DIR . $name);
+            BookRepository::setCover((int)$_POST['book_id'], $name);
+            json_response(['ok' => true, 'file' => 'uploads/' . $name]);
+            break;
+
         case 'user.role':
             if (!Auth::hasRole('admin')) {
                 json_error('Доступ запрещён', 403);

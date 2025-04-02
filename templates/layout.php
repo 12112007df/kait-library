@@ -16,6 +16,10 @@
             <?php if (in_array($user['role'], ['librarian', 'admin'])): ?>
                 <a href="index.php?page=librarian">Выдача</a>
                 <a href="index.php?page=debtors">Должники</a>
+                <a href="index.php?page=admin_books">Книги</a>
+            <?php endif; ?>
+            <?php if ($user['role'] === 'admin'): ?>
+                <a href="index.php?page=admin_users">Пользователи</a>
             <?php endif; ?>
             <span class="user-name"><?= e($user['full_name']) ?></span>
             <a href="index.php?page=logout" class="btn btn-light">Выйти</a>

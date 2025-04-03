@@ -103,7 +103,7 @@ switch ($page) {
                 $bookId = BookRepository::create($_POST);
                 $copies = (int)($_POST['copies'] ?? 1);
                 for ($i = 1; $i <= $copies; $i++) {
-                    BookRepository::addCopy($bookId, 'INV-' . $bookId . '-' . $i);
+                    BookRepository::addCopy($bookId, 'INV-' . str_pad($bookId, 4, '0', STR_PAD_LEFT) . '-' . $i);
                 }
                 $message = 'Книга добавлена';
             }

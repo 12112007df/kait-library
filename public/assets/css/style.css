@@ -148,3 +148,9 @@ label input, label select, label textarea { display: block; width: 100%; margin-
 .stats div { background: #fff; padding: 14px 20px; border-radius: 10px; min-width: 140px; }
 .stats b { display: block; font-size: 26px; color: #1f5f8b; }
 .stats span { color: #888; font-size: 13px; }
+
+@media (max-width: 700px) {
+    .book-page { flex-direction: column; }
+    .form-grid { grid-template-columns: 1fr; }
+    .span-2 { grid-column: auto; }
+}

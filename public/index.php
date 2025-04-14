@@ -63,6 +63,7 @@ switch ($page) {
         render('profile', [
             'title' => 'Личный кабинет',
             'loans' => LoanService::userLoans($user['id']),
+            'reservations' => ReservationRepository::forUser($user['id']),
         ]);
         break;
 
@@ -84,6 +85,15 @@ switch ($page) {
             exit;
         }
         render('debtors', ['title' => 'Должники', 'debtors' => ReportService::debtors()]);
+        break;
+
+    case 'reservations':
+        Auth::requireRole(['librarian', 'admin']);
+        render('reservations', [
+            'title' => 'Бронирования',
+            'reservations' => ReservationRepository::active(),
+            'popular' => BookRepository::popular(),
+        ]);
         break;
 
     case 'admin_users':

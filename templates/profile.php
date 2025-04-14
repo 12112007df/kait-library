@@ -25,3 +25,21 @@
     </table>
 <?php endif; ?>
 
+<h2>Мои бронирования</h2>
+<?php if (!$reservations): ?>
+    <p class="muted">Бронирований нет.</p>
+<?php else: ?>
+    <table class="table">
+        <thead><tr><th>Книга</th><th>Дата</th><th>Статус</th><th>Очередь</th></tr></thead>
+        <tbody>
+        <?php foreach ($reservations as $r): ?>
+            <tr>
+                <td><?= e($r['title']) ?><br><span class="muted"><?= e($r['author']) ?></span></td>
+                <td><?= format_date($r['created_at']) ?></td>
+                <td><?= ['active' => 'ожидает', 'done' => 'выдана', 'cancelled' => 'отменена'][$r['status']] ?></td>
+                <td><?= $r['status'] === 'active' ? ReservationRepository::queuePosition($r['book_id'], $user['id']) : '—' ?></td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+<?php endif; ?>

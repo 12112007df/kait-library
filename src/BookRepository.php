@@ -86,4 +86,17 @@ class BookRepository
     {
         return Database::execute('UPDATE books SET cover = ? WHERE id = ?', [$fileName, $bookId]);
     }
+
+    public static function popular($limit = 5)
+    {
+        return Database::fetchAll(
+            'SELECT b.id, b.title, b.author, COUNT(l.id) AS loans
+             FROM books b
+             JOIN copies c ON c.book_id = b.id
+             JOIN loans l ON l.copy_id = c.id
+             GROUP BY b.id, b.title, b.author
+             ORDER BY loans DESC
+             LIMIT ' . (int)$limit
+        );
+    }
 }

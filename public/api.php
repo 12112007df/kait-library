@@ -8,6 +8,7 @@ $action = $_GET['action'] ?? '';
 
 try {
     switch ($action) {
+
         case 'books.search':
             $books = BookRepository::search(
                 $_GET['q'] ?? '',
@@ -58,6 +59,15 @@ try {
             }
             $data = request_json();
             json_response(LoanService::reserve((int)$data['book_id'], Auth::user()['id']));
+            break;
+
+        case 'reservation.cancel':
+            if (!Auth::check()) {
+                json_error('Нужно войти', 401);
+            }
+            $data = request_json();
+            ReservationRepository::cancel((int)$data['id']);
+            json_response(['ok' => true]);
             break;
 
         case 'loan.issue':

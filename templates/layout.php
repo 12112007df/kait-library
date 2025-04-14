@@ -15,6 +15,7 @@
             <a href="index.php?page=profile">Мои книги</a>
             <?php if (in_array($user['role'], ['librarian', 'admin'])): ?>
                 <a href="index.php?page=librarian">Выдача</a>
+                <a href="index.php?page=reservations">Бронирования</a>
                 <a href="index.php?page=debtors">Должники</a>
                 <a href="index.php?page=admin_books">Книги</a>
             <?php endif; ?>

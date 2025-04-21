@@ -86,6 +86,10 @@ class LoanService
         // срок возврата
         if ($reader['category'] == 'student') {
             $days = LOAN_DAYS_STUDENT;
+            $month = (int)date('n');
+            if ($month >= 6 && $month <= 8) {
+                $days = $days * 2;
+            }
         } else {
             $days = LOAN_DAYS_TEACHER;
         }

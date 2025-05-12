@@ -68,7 +68,7 @@ class BookRepository
                 $data['genre_id'] ?: null,
                 $data['year'] ?: null,
                 $data['isbn'] ?: null,
-                $data['description'],
+                $data['description'] ?? '',
                 date('Y-m-d H:i:s'),
             ]
         );

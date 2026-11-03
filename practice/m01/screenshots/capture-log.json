@@ -18,7 +18,30 @@
     "05-librarian.png",
     "06-structure-metrics.png",
     "07-blame-ready.png",
-    "08-github-result.png"
+    "08-github-result.png",
+    "09-github-repository.jpg",
+    "10-github-module.jpg",
+    "11-github-merged-pr.jpg"
   ],
-  "github_api_snapshot": "GitHub repository and PR #1 read through the connected GitHub API"
+  "github_api_snapshot": "GitHub repository and PR #1 read through the connected GitHub API",
+  "github_ui_snapshots": [
+    {
+      "file": "09-github-repository.jpg",
+      "url": "https://github.com/12112007df/kait-library",
+      "date": "2026-11-03",
+      "method": "Direct browser viewport screenshot; unmodified GitHub page"
+    },
+    {
+      "file": "10-github-module.jpg",
+      "url": "https://github.com/12112007df/kait-library/tree/main/practice/m01",
+      "date": "2026-11-03",
+      "method": "Direct browser viewport screenshot; unmodified GitHub page"
+    },
+    {
+      "file": "11-github-merged-pr.jpg",
+      "url": "https://github.com/12112007df/kait-library/pull/1",
+      "date": "2026-11-03",
+      "method": "Direct browser viewport screenshot; unmodified GitHub page"
+    }
+  ]
 }

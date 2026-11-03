@@ -1,0 +1,58 @@
+$ git ls-tree --name-only HEAD
+.env.example
+.github
+.gitignore
+LICENSE
+README.md
+config
+database
+practice
+public
+src
+templates
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/scratch/178f941434b5/PP03/tools/metrics.py /workspace/scratch/178f941434b5/kait-library
+## Метрики кода
+
+Дата замера: 03.11.2026 13:54
+
+### Строки кода
+
+| Язык | Файлов | Код | Комментарии | Пустые |
+|---|---|---|---|---|
+| PHP | 26 | 1365 | 43 | 133 |
+| JavaScript | 6 | 238 | 6 | 23 |
+| CSS | 1 | 133 | 6 | 18 |
+| SQL | 2 | 104 | 4 | 14 |
+| **Итого** | 35 | 1840 | 59 | 188 |
+
+> Сложность не посчитана: установите lizard командой `pip install lizard` и запустите снова.
+
+Перенесите итоговые числа в таблицу `practice/m03/metrics.md`.
+
+
+$ git blame -L 35,54 -- src/LoanService.php
+b4621877 (Андрей Ковалёв 2025-02-18 18:40:00 +0300 35)             }
+b4621877 (Андрей Ковалёв 2025-02-18 18:40:00 +0300 36)         }
+b4621877 (Андрей Ковалёв 2025-02-18 18:40:00 +0300 37) 
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 38)         // лимит книг на руках
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 39)         $active = Database::fetchOne(
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 40)             'SELECT COUNT(*) AS cnt FROM loans WHERE user_id = ? AND returned_at IS NULL',
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 41)             [$reader['id']]
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 42)         );
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 43)         if ($reader['category'] == 'student') {
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 44)             $limit = MAX_BOOKS_STUDENT;
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 45)         } else {
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 46)             $limit = MAX_BOOKS_TEACHER;
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 47)         }
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 48)         if ($active['cnt'] > $limit) {
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 49)             return ['ok' => false, 'message' => 'Превышен лимит книг на руках (' . $limit . ')'];
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 50)         }
+3049bbd6 (Андрей Ковалёв 2025-03-03 11:47:00 +0300 51) 
+c032fb2f (Андрей Ковалёв 2025-02-25 17:33:00 +0300 52)         // просроченные книги
+c032fb2f (Андрей Ковалёв 2025-02-25 17:33:00 +0300 53)         $overdue = Database::fetchOne(
+c032fb2f (Андрей Ковалёв 2025-02-25 17:33:00 +0300 54)             'SELECT COUNT(*) AS cnt FROM loans WHERE user_id = ? AND returned_at IS NULL AND due_at < ?',
+
+$ /opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3 /workspace/scratch/178f941434b5/PP03/tools/check_practice.py /workspace/scratch/178f941434b5/kait-library --module 1
+М01  ✓ готов к сдаче
+

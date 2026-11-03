@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-03",
+  "php": "8.5.12",
+  "database": "SQLite 3.45.2",
+  "checks": [
+    "Каталог: 10 книг",
+    "Поиск Чистый: одна книга",
+    "Регистрация тестового читателя завершена",
+    "Бронирование и личный кабинет",
+    "Вход библиотекаря и страница выдачи",
+    "Запрет страницы администратора для библиотекаря: HTTP 403"
+  ],
+  "files": [
+    "01-catalog.png",
+    "02-search.png",
+    "03-register.png",
+    "04-reader.png",
+    "05-librarian.png",
+    "06-structure-metrics.png",
+    "07-blame-ready.png",
+    "08-github-result.png"
+  ],
+  "github_api_snapshot": "GitHub repository and PR #1 read through the connected GitHub API"
+}

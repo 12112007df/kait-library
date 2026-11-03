@@ -22,9 +22,56 @@ PHP 8, MySQL 8, без фреймворков. Клиентская часть �
 
 ## Установка
 
-1. Скопируйте проект в папку веб-сервера (XAMPP: `htdocs`, OpenServer: `domains`).
-2. Создайте базу данных `kait_library` и импортируйте `database/schema.sql`.
-3. Откройте `http://localhost/kait-library/public/`.
+Для основного варианта нужны PHP 8 с расширениями PDO, pdo_mysql, mbstring и MySQL 8
+или MariaDB 10.6+. Папка `public/` должна быть корнем сайта; остальные папки не должны
+быть доступны через веб-сервер. Встроенный сервер PHP подходит для локальной разработки.
+
+1. Клонируйте репозиторий и перейдите в папку проекта.
+2. Скопируйте `.env.example` в `.env` (`cp .env.example .env` в Git Bash/Linux или
+   `Copy-Item .env.example .env` в PowerShell).
+3. Создайте пустую базу `kait_library` с кодировкой utf8mb4. В `.env` задайте
+   DB_HOST, DB_PORT, DB_NAME, DB_USER и DB_PASS своего локального сервера.
+   `.env` исключён из Git; не добавляйте туда реальные данные учебной организации.
+4. Импортируйте `database/schema.sql`, затем **один раз** `database/seed.sql` в эту БД.
+   Например, в Git Bash/Linux (пароль вводится по запросу клиента):
+   ```bash
+   mysql -u root -p -e "CREATE DATABASE kait_library CHARACTER SET utf8mb4;"
+   mysql -u root -p kait_library < database/schema.sql
+   mysql -u root -p kait_library < database/seed.sql
+   ```
+   В PowerShell удобнее открыть клиент `mysql -u root -p kait_library` и выполнить
+   `source database/schema.sql;`, затем `source database/seed.sql;`.
+5. Установите APP_URL=http://127.0.0.1:8080 и выполните из корня:
+   ```bash
+   php -S 127.0.0.1:8080 -t public
+   ```
+6. Откройте http://127.0.0.1:8080/. Учебные учётные записи описаны в `database/seed.sql`.
+   Тестовые записи и их общий пароль предназначены только для изолированного стенда.
+
+Это уточнённая инструкция основного варианта MySQL; результаты проверки модуля 1
+получены на альтернативном SQLite-стенде ниже, а не на MySQL.
+
+### Проверочный стенд модуля 1 с SQLite
+
+В `src/Database.php` уже есть поддержка DB_DRIVER=sqlite. Чтобы проверить приложение
+без сервера MySQL, нужен PHP с PDO, pdo_sqlite, mbstring, session, json и filter.
+
+```bash
+python practice/m01/init-sqlite.py ../runtime/library.sqlite
+```
+
+Скрипт создаёт новую БД из исходных schema.sql и seed.sql, не перезаписывая существующую.
+В локальном `.env` укажите DB_DRIVER=sqlite и DB_NAME с **абсолютным путём** к созданному файлу.
+Проверенная команда на Linux с загруженным отдельным FrankenPHP 1.13.4 (PHP 8.5.12):
+
+```bash
+../runtime/frankenphp php-server --root public --listen 127.0.0.1:8080
+```
+
+FrankenPHP скачивается отдельно; исполняемый файл и БД в репозиторий не включены.
+SQLite здесь служит только для проверки запуска: типы ENUM, ограничения длины и
+правила сравнения строк MySQL воспроизводятся не полностью. Переносимость основного
+варианта на MySQL этим тестом не подтверждается. Протокол: `practice/m01/run-log.md`.
 
 ## Структура
 

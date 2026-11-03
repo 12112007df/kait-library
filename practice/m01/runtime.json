@@ -1,0 +1,43 @@
+{
+  "php": "8.5.12",
+  "extensions": {
+    "PDO": "8.5.12",
+    "pdo_sqlite": "8.5.12",
+    "pdo_mysql": "8.5.12",
+    "mbstring": "8.5.12",
+    "session": "8.5.12",
+    "json": "8.5.12",
+    "filter": "8.5.12"
+  },
+  "sqlite": "3.45.2",
+  "php_syntax": {
+    "Auth.php": true,
+    "BookRepository.php": true,
+    "Database.php": true,
+    "LoanService.php": true,
+    "ReportService.php": true,
+    "ReservationRepository.php": true,
+    "ReviewRepository.php": true,
+    "UserRepository.php": true,
+    "Validator.php": true,
+    "bootstrap.php": true,
+    "helpers.php": true,
+    "config.php": true,
+    "admin_books.php": true,
+    "admin_users.php": true,
+    "book.php": true,
+    "catalog.php": true,
+    "debtors.php": true,
+    "error.php": true,
+    "layout.php": true,
+    "librarian.php": true,
+    "login.php": true,
+    "profile.php": true,
+    "register.php": true,
+    "reservations.php": true,
+    "api.php": true,
+    "index.php": true
+  },
+  "browser": "153.0.8010.0",
+  "frankenphp": "1.13.4"
+}

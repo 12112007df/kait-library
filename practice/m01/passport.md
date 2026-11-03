@@ -86,7 +86,7 @@ BookRepository::search() -> PDO -> БД. Отдельного файла мар�
 | json | Расширение PHP; версия стенда в runtime.json | JSON для Fetch API. |
 | filter | Расширение PHP; версия стенда в runtime.json | filter_var для email. |
 | MySQL / MariaDB | MySQL 8 / MariaDB 10.6+ по исходнику | Основное хранилище; здесь не запускалось. |
-| Браузер с Fetch API | Chromium 151 на стенде | Формы и асинхронные запросы. |
+| Браузер с Fetch API | Chromium 153.0.8010.0 на стенде | Формы и асинхронные запросы. |
 | FrankenPHP | 1.13.4, только стенд | Локальный HTTP-сервер с PHP. |
 | pdo_sqlite / SQLite | Альтернативная ветвь Database.php; версия в runtime.json | Изолированная локальная БД. |
 | Python | 3.12.14 на стенде | Скрипты статистики, проверки, подготовки SQLite. |

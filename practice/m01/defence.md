@@ -2,7 +2,7 @@
 
 1. **Форк и клон.** Форк - отдельный репозиторий на GitHub со связью с исходником.
    Клон - локальная копия репозитория с историей. Исходник - AlexandrAndreevichB/kait-library,
-   мой форк - dzabrailumarov2007-hue/kait-library. Изменения практики отправляются в мой форк.
+   мой форк - 12112007df/kait-library. Изменения практики отправляются в мой форк.
 2. **Стек по файлам.** package.json указывает на Node.js/JavaScript, composer.json -
    PHP-пакеты, requirements.txt/pyproject.toml - Python. В моей библиотеке этих файлов нет:
    PHP подтверждается public/index.php, MySQL - database/schema.sql и .env.example,

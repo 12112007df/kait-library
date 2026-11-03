@@ -1,11 +1,13 @@
 {
   "repository": "https://github.com/AlexandrAndreevichB/kait-library",
-  "fork": "https://github.com/dzabrailumarov2007-hue/kait-library",
+  "fork": "https://github.com/12112007df/kait-library",
   "commit": "fa96e45cc8d3eac09a6b40496ef120d688406ea5",
   "analysis_date": "2026-11-03",
   "original_commits": 36,
   "code_files": 35,
   "code_lines": 1840,
   "comment_lines": 59,
-  "blank_lines": 188
+  "blank_lines": 188,
+  "fork_at_capture": "https://github.com/dzabrailumarov2007-hue/kait-library",
+  "scope_note": "Source code and history at commit before practice; current fork URL updated after account rename."
 }

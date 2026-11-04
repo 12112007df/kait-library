@@ -39,5 +39,13 @@
     "index.php": true
   },
   "browser": "153.0.8010.0",
-  "frankenphp": "1.13.4"
+  "frankenphp": "1.13.4",
+  "captured_date": "2026-11-03",
+  "csv_update": {
+    "date": "2026-11-04",
+    "php_files_syntax_checked": 27,
+    "checks": "csv-checks.json",
+    "passed_groups": 13,
+    "additional_extension": "ctype"
+  }
 }

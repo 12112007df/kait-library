@@ -1,0 +1,14 @@
+{
+  "repository": "https://github.com/12112007df/kait-library",
+  "commit": "3bb9b05c60d5d05ea2b3e504a01113054384a258",
+  "analysis_date": "2026-11-04",
+  "original_commit": "fa96e45cc8d3eac09a6b40496ef120d688406ea5",
+  "change": "Catalog CSV export with role checks and filters",
+  "code_files": 36,
+  "code_lines": 2048,
+  "comment_lines": 59,
+  "blank_lines": 200,
+  "minimum_code_lines": 2000,
+  "minimum_met": true,
+  "scope_note": "Application code only; practice and helper/test scripts are excluded."
+}

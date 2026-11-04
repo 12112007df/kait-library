@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-04",
+  "database": "Temporary SQLite, initialized from schema.sql and seed.sql",
+  "runtime": "FrankenPHP",
+  "checks": [
+    {
+      "name": "Syntax of all 27 application PHP files",
+      "result": "passed"
+    },
+    {
+      "name": "Anonymous export denied and export button hidden",
+      "result": "passed"
+    },
+    {
+      "name": "Reader export denied and export button hidden",
+      "result": "passed"
+    },
+    {
+      "name": "Librarian CSV has 10 books, 11 columns and 14 copies with UTF-8 BOM",
+      "result": "passed"
+    },
+    {
+      "name": "Administrator can export the catalog",
+      "result": "passed"
+    },
+    {
+      "name": "Title filter and copy availability match database",
+      "result": "passed"
+    },
+    {
+      "name": "Genre filter returns the four programming books",
+      "result": "passed"
+    },
+    {
+      "name": "Year sorting is descending",
+      "result": "passed"
+    },
+    {
+      "name": "Empty results and SQL/LIKE metacharacters produce only CSV header",
+      "result": "passed"
+    },
+    {
+      "name": "Invalid scalar, UTF-8, length, genre, control and sort values rejected",
+      "result": "passed"
+    },
+    {
+      "name": "Export rejects POST with HTTP 405",
+      "result": "passed"
+    },
+    {
+      "name": "Quotes, semicolon, newline, formula prefixes and books without copies handled",
+      "result": "passed"
+    },
+    {
+      "name": "Original catalog search still responds after export requests",
+      "result": "passed"
+    }
+  ],
+  "passed": 13,
+  "failed": 0,
+  "limitations": [
+    "MySQL/MariaDB not tested",
+    "Browser click not automated",
+    "Not proof of running on student PC"
+  ]
+}

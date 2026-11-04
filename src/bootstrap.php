@@ -6,6 +6,7 @@ require_once __DIR__ . '/helpers.php';
 require_once __DIR__ . '/Auth.php';
 require_once __DIR__ . '/Validator.php';
 require_once __DIR__ . '/BookRepository.php';
+require_once __DIR__ . '/CatalogExport.php';
 require_once __DIR__ . '/LoanService.php';
 require_once __DIR__ . '/ReviewRepository.php';
 require_once __DIR__ . '/UserRepository.php';

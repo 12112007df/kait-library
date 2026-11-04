@@ -65,3 +65,49 @@ document.getElementById('genre').addEventListener('change', () => load(1));
 document.getElementById('sort').addEventListener('change', () => load(1));
 
 load();
+
+const exportButton = document.getElementById('export-catalog');
+const exportStatus = document.getElementById('export-status');
+
+if (exportButton && exportStatus) {
+    exportButton.addEventListener('click', async () => {
+        const params = new URLSearchParams({
+            action: 'books.export',
+            q: document.getElementById('q').value,
+            genre: document.getElementById('genre').value,
+            sort: document.getElementById('sort').value,
+        });
+        exportButton.disabled = true;
+        exportStatus.textContent = 'Подготовка файла…';
+        let downloadUrl = null;
+        try {
+            const response = await fetch(`api.php?${params}`, {
+                credentials: 'same-origin',
+                headers: { Accept: 'text/csv' },
+            });
+            if (!response.ok) {
+                const error = await response.json().catch(() => null);
+                throw new Error(error?.error || 'Не удалось выгрузить каталог.');
+            }
+            if (!response.headers.get('content-type')?.startsWith('text/csv')) {
+                throw new Error('Сервер вернул неподдерживаемый формат файла.');
+            }
+            const blob = await response.blob();
+            downloadUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.download = 'catalog.csv';
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            exportStatus.textContent = 'Файл catalog.csv подготовлен.';
+        } catch (error) {
+            exportStatus.textContent = error.message;
+        } finally {
+            if (downloadUrl) {
+                setTimeout(() => URL.revokeObjectURL(downloadUrl), 1000);
+            }
+            exportButton.disabled = false;
+        }
+    });
+}

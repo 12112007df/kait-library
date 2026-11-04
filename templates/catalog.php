@@ -17,6 +17,13 @@
     <button type="submit" class="btn">Найти</button>
 </form>
 
+<?php if (Auth::hasRole(['librarian', 'admin'])): ?>
+    <p>
+        <button type="button" id="export-catalog" class="btn btn-light">Скачать каталог CSV</button>
+        <span id="export-status" role="status" aria-live="polite"></span>
+    </p>
+<?php endif; ?>
+
 <p id="found" class="muted"></p>
 <div id="books" class="grid"></div>
 <div id="pager" class="pager"></div>

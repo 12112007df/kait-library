@@ -9,6 +9,10 @@ $action = $_GET['action'] ?? '';
 try {
     switch ($action) {
 
+        case 'books.export':
+            CatalogExport::download($_GET);
+            break;
+
         case 'books.search':
             $books = BookRepository::search(
                 $_GET['q'] ?? '',

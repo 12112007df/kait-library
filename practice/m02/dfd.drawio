@@ -124,7 +124,7 @@
             <mxPoint x="340" y="83" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1-7" value="F02  Профиль, результат&#10;входа и изменения" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="1-7" value="F02  Профиль, вход, список&#10;и статус пользователей" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="164" y="52" width="172" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="1-8" style="edgeStyle=none;html=0;strokeColor=#222222;strokeWidth=1.2;startArrow=none;endArrow=none;" edge="1" parent="1">
@@ -202,7 +202,7 @@
             <mxPoint x="340" y="293" as="targetPoint"/>
           </mxGeometry>
         </mxCell>
-        <mxCell id="1-25" value="F04  Каталог, отзывы,&#10;результат и CSV" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="1-25" value="F04  Каталог, отзывы, CSV,&#10;обложки и результат" style="text;html=0;whiteSpace=wrap;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontFamily=Times New Roman;fontSize=14;" vertex="1" parent="1">
           <mxGeometry x="164" y="262" width="172" height="30" as="geometry"/>
         </mxCell>
         <mxCell id="1-26" style="edgeStyle=none;html=0;strokeColor=#222222;strokeWidth=1.2;startArrow=none;endArrow=none;" edge="1" parent="1">

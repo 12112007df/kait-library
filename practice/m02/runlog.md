@@ -46,3 +46,15 @@ DFD создана штатными редактируемыми фигурам�
 | screenshots/07-register-payload.png | POST регистрации, Form Data; password = *** |
 | screenshots/08-register-headers.png | POST регистрации, Headers, статус 302 и перенаправление |
 | screenshots/09-search-response.png | GET поиска, Response, JSON с total=1 |
+
+## Уточнение отчёта по моей копии
+
+08.11.2026 отчёт дополнен привязкой к рабочему репозиторию 12112007df/kait-library и тремя реальными снимками публичных страниц GitHub. Главная страница показывает владельца 12112007df и main; страница PR № 4 — статус Merged; папка practice/m02 — материалы моего модуля. Состояние до уточнения отчёта: main 01829e4. Исходный срез приложения для анализа остаётся 3d73b65.
+
+| Файл | Страница |
+|---|---|
+| screenshots/10-my-repository.jpg | https://github.com/12112007df/kait-library |
+| screenshots/11-my-m02-files.jpg | https://github.com/12112007df/kait-library/tree/main/practice/m02 |
+| screenshots/12-m02-merged-pr.jpg | https://github.com/12112007df/kait-library/pull/4 |
+
+Снимки получены браузером с реальных страниц. Исходные JPEG сохранены целиком; в Word кадрирование выполнено средствами документа. Отчёт после уточнения: 23 страницы, 10 рисунков и 7 таблиц. Новые проверки приложения для этого изменения не запускались, поскольку его исходники не изменялись.

@@ -1,0 +1,139 @@
+{
+  "source_commit": "3d73b653fbca6de54fdd1ac4bc33a6f7a8db85b1",
+  "started_at": "2026-11-08T15:07:38.290Z",
+  "checks": [
+    {
+      "name": "registration HTTP status",
+      "actual": 302,
+      "expected": 302,
+      "ok": true
+    },
+    {
+      "name": "search HTTP status",
+      "actual": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "name": "search result count",
+      "actual": 1,
+      "expected": 1,
+      "ok": true
+    },
+    {
+      "name": "search book title",
+      "actual": "Чистый код",
+      "expected": "Чистый код",
+      "ok": true
+    },
+    {
+      "name": "invalid email accepted by server",
+      "actual": 302,
+      "expected": 302,
+      "ok": true
+    },
+    {
+      "name": "short password returns form",
+      "actual": 200,
+      "expected": 200,
+      "ok": true
+    },
+    {
+      "name": "short password error present",
+      "actual": true,
+      "expected": true,
+      "ok": true
+    },
+    {
+      "name": "unescaped quote causes search server error",
+      "actual": 500,
+      "expected": 500,
+      "ok": true
+    },
+    {
+      "name": "guest export forbidden",
+      "actual": 401,
+      "expected": 401,
+      "ok": true
+    }
+  ],
+  "browser": "157.0.8103.38",
+  "devtools": true,
+  "registration": {
+    "method": "POST",
+    "url": "/index.php?page=register",
+    "status": 302,
+    "location": "index.php?page=catalog",
+    "fields": [
+      "full_name",
+      "email",
+      "password",
+      "category",
+      "group_name",
+      "phone"
+    ]
+  },
+  "search": {
+    "method": "GET",
+    "url": "/api.php?action=books.search&q=%D0%A7%D0%B8%D1%81%D1%82%D1%8B%D0%B9&genre=&sort=b.title&p=1",
+    "status": 200,
+    "response": {
+      "ok": true,
+      "items": [
+        {
+          "id": 1,
+          "title": "Чистый код",
+          "author": "Роберт Мартин",
+          "genre_id": 1,
+          "year": 2019,
+          "isbn": "978-5-4461-0960-9",
+          "description": "Создание, анализ и рефакторинг кода.",
+          "cover": null,
+          "created_at": "2025-02-15 10:00:00",
+          "genre": "Программирование",
+          "available": 1
+        }
+      ],
+      "total": 1,
+      "pages": 1,
+      "page": 1
+    }
+  },
+  "validation": {
+    "invalid_email_status": 302,
+    "short_password_status": 200,
+    "quote_search_status": 500,
+    "guest_export_status": 401
+  },
+  "finished_at": "2026-11-08T15:07:39.680Z",
+  "database": {
+    "registered_user": {
+      "id": 7,
+      "full_name": "Тестовый читатель М02",
+      "email": "m02.reader@example.test",
+      "role": "reader",
+      "category": "student",
+      "group_name": "ИСПО332"
+    },
+    "invalid_email_rows": 1,
+    "short_password_rows": 0
+  },
+  "har": {
+    "entries": 10,
+    "redactions": {
+      "headers": 8,
+      "cookies": 8,
+      "form_fields": 1,
+      "post_text": 1
+    },
+    "secret_scan_passed": true,
+    "sha256": "ed3e9540de7ce9ff79a2597ddab8c39ca57a0bd889cf998cf24b6e86cbb0e727"
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "sqlite": "3.53.1",
+    "php": "8.5.12",
+    "frankenphp": "1.13.4",
+    "chromium": "157.0.8103.38"
+  }
+}

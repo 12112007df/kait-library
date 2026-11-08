@@ -1,0 +1,11 @@
+{
+  "entries": 10,
+  "redactions": {
+    "headers": 8,
+    "cookies": 8,
+    "form_fields": 1,
+    "post_text": 1
+  },
+  "secret_scan_passed": true,
+  "sha256": "ed3e9540de7ce9ff79a2597ddab8c39ca57a0bd889cf998cf24b6e86cbb0e727"
+}

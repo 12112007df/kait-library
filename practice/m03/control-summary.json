@@ -1,0 +1,106 @@
+{
+  "baseline": "69ffbdb",
+  "changed_code": "47ec648",
+  "scenarios": [
+    {
+      "scenario": "student",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "teacher_overdue",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "issued",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "reserved",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "unknown_reader",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "blocked",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "unknown_copy",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "repair",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "lost",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "student_overdue",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "student_at_limit",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "student_over_limit",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "own_reservation",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    },
+    {
+      "scenario": "queue_with_spare",
+      "http_matches": true,
+      "json_matches": true,
+      "raw_response_matches": true,
+      "database_matches": true
+    }
+  ],
+  "total": 14,
+  "passed": 14
+}

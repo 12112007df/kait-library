@@ -22,17 +22,9 @@ class LoanService
         }
 
         $copy = Database::fetchOne('SELECT * FROM copies WHERE inventory_number = ?', [$inventoryNumber]);
-        if (!$copy) {
-            return ['ok' => false, 'message' => 'Экземпляр не найден'];
-        }
-        if ($copy['status'] != 'available') {
-            if ($copy['status'] == 'issued') {
-                return ['ok' => false, 'message' => 'Экземпляр уже выдан'];
-            } elseif ($copy['status'] == 'repair') {
-                return ['ok' => false, 'message' => 'Экземпляр на ремонте'];
-            } else {
-                return ['ok' => false, 'message' => 'Экземпляр списан или утерян'];
-            }
+        $copyError = self::copyIssueError($copy);
+        if ($copyError !== null) {
+            return ['ok' => false, 'message' => $copyError];
         }
 
         // лимит книг на руках
@@ -117,6 +109,23 @@ class LoanService
             'due_at' => $dueAt,
             'warnings' => $warnings,
         ];
+    }
+
+    private static function copyIssueError($copy)
+    {
+        if (!$copy) {
+            return 'Экземпляр не найден';
+        }
+        if ($copy['status'] != 'available') {
+            if ($copy['status'] == 'issued') {
+                return 'Экземпляр уже выдан';
+            } elseif ($copy['status'] == 'repair') {
+                return 'Экземпляр на ремонте';
+            } else {
+                return 'Экземпляр списан или утерян';
+            }
+        }
+        return null;
     }
 
     /**

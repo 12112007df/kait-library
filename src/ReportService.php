@@ -56,16 +56,16 @@ class ReportService
         fwrite($out, "\xEF\xBB\xBF");
         fputcsv($out, ['ФИО', 'Email', 'Группа', 'Книга', 'Инв. номер', 'Срок', 'Дней просрочки', 'Штраф'], ';');
         foreach ($rows as $row) {
-            foreach ($row['books'] as $b) {
+            foreach ($row['books'] as $overdueBook) {
                 fputcsv($out, [
                     $row['user']['full_name'],
                     $row['user']['email'],
                     $row['user']['group_name'],
-                    $b['title'],
-                    $b['inventory_number'],
-                    format_date($b['due_at']),
-                    $b['days_late'],
-                    $b['fine'],
+                    $overdueBook['title'],
+                    $overdueBook['inventory_number'],
+                    format_date($overdueBook['due_at']),
+                    $overdueBook['days_late'],
+                    $overdueBook['fine'],
                 ], ';');
             }
         }

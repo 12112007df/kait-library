@@ -21,8 +21,8 @@ class BookRepository
         $books = Database::get()->query($sql)->fetchAll();
 
         // количество свободных экземпляров для каждой книги
-        foreach ($books as $i => $book) {
-            $books[$i]['available'] = self::availableCount($book['id']);
+        foreach ($books as $bookIndex => $book) {
+            $books[$bookIndex]['available'] = self::availableCount($book['id']);
         }
         return $books;
     }

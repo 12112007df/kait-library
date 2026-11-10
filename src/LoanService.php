@@ -32,26 +32,11 @@ class LoanService
             return ['ok' => false, 'message' => $readerError];
         }
 
-        // бронирования: свободный экземпляр нельзя выдать, если его ждут другие
-        $reservations = Database::fetchAll(
-            "SELECT * FROM reservations WHERE book_id = ? AND status = 'active' ORDER BY created_at",
-            [$copy['book_id']]
-        );
-        $ownReservation = null;
-        $othersBefore = 0;
-        foreach ($reservations as $r) {
-            if ($r['user_id'] == $reader['id']) {
-                $ownReservation = $r;
-                break;
-            }
-            $othersBefore++;
+        $reservationResult = self::reservationForIssue($reader, $copy);
+        if (!$reservationResult['ok']) {
+            return $reservationResult;
         }
-        if ($othersBefore > 0) {
-            $available = BookRepository::availableCount($copy['book_id']);
-            if ($available <= $othersBefore) {
-                return ['ok' => false, 'message' => 'Все свободные экземпляры забронированы другими читателями'];
-            }
-        }
+        $ownReservation = $reservationResult['reservation'];
 
         // срок возврата
         if ($reader['category'] == 'student') {
@@ -135,6 +120,31 @@ class LoanService
             }
         }
         return null;
+    }
+
+    private static function reservationForIssue($reader, $copy)
+    {
+        // бронирования: свободный экземпляр нельзя выдать, если его ждут другие
+        $reservations = Database::fetchAll(
+            "SELECT * FROM reservations WHERE book_id = ? AND status = 'active' ORDER BY created_at",
+            [$copy['book_id']]
+        );
+        $ownReservation = null;
+        $othersBefore = 0;
+        foreach ($reservations as $r) {
+            if ($r['user_id'] == $reader['id']) {
+                $ownReservation = $r;
+                break;
+            }
+            $othersBefore++;
+        }
+        if ($othersBefore > 0) {
+            $available = BookRepository::availableCount($copy['book_id']);
+            if ($available <= $othersBefore) {
+                return ['ok' => false, 'message' => 'Все свободные экземпляры забронированы другими читателями'];
+            }
+        }
+        return ['ok' => true, 'reservation' => $ownReservation];
     }
 
     /**

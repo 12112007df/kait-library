@@ -38,24 +38,7 @@ class LoanService
         }
         $ownReservation = $reservationResult['reservation'];
 
-        // срок возврата
-        if ($reader['category'] == 'student') {
-            $days = LOAN_DAYS_STUDENT;
-            $month = (int)date('n');
-            if ($month >= 6 && $month <= 8) {
-                $days = $days * 2;
-            }
-        } else {
-            $days = LOAN_DAYS_TEACHER;
-        }
-        $due = strtotime('+' . $days . ' days');
-        $weekday = (int)date('w', $due);
-        if ($weekday == 0) {
-            $due = strtotime('+1 day', $due);
-        } elseif ($weekday == 6) {
-            $due = strtotime('+2 days', $due);
-        }
-        $dueAt = date('Y-m-d', $due);
+        $dueAt = self::dueDateForCategory($reader['category']);
 
         Database::insert(
             'INSERT INTO loans (copy_id, user_id, librarian_id, issued_at, due_at) VALUES (?, ?, ?, ?, ?)',
@@ -145,6 +128,28 @@ class LoanService
             }
         }
         return ['ok' => true, 'reservation' => $ownReservation];
+    }
+
+    private static function dueDateForCategory($category)
+    {
+        // срок возврата
+        if ($category == 'student') {
+            $days = LOAN_DAYS_STUDENT;
+            $month = (int)date('n');
+            if ($month >= 6 && $month <= 8) {
+                $days = $days * 2;
+            }
+        } else {
+            $days = LOAN_DAYS_TEACHER;
+        }
+        $due = strtotime('+' . $days . ' days');
+        $weekday = (int)date('w', $due);
+        if ($weekday == 0) {
+            $due = strtotime('+1 day', $due);
+        } elseif ($weekday == 6) {
+            $due = strtotime('+2 days', $due);
+        }
+        return date('Y-m-d', $due);
     }
 
     /**

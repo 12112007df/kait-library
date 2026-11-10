@@ -1,0 +1,850 @@
+[
+  {
+    "file": "src/ReportService.php",
+    "name": "ReportService::debtors",
+    "line": 8,
+    "cc": 6,
+    "nloc": 40,
+    "length": 40
+  },
+  {
+    "file": "src/ReportService.php",
+    "name": "ReportService::debtorsCsv",
+    "line": 52,
+    "cc": 3,
+    "nloc": 23,
+    "length": 23
+  },
+  {
+    "file": "src/ReportService.php",
+    "name": "ReportService::stats",
+    "line": 76,
+    "cc": 1,
+    "nloc": 9,
+    "length": 9
+  },
+  {
+    "file": "src/Database.php",
+    "name": "Database::get",
+    "line": 7,
+    "cc": 3,
+    "nloc": 15,
+    "length": 15
+  },
+  {
+    "file": "src/Database.php",
+    "name": "Database::fetchAll",
+    "line": 23,
+    "cc": 1,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/Database.php",
+    "name": "Database::fetchOne",
+    "line": 30,
+    "cc": 2,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Database.php",
+    "name": "Database::execute",
+    "line": 38,
+    "cc": 1,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/Database.php",
+    "name": "Database::insert",
+    "line": 45,
+    "cc": 1,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::filters",
+    "line": 12,
+    "cc": 9,
+    "nloc": 22,
+    "length": 22
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::stringValue",
+    "line": 35,
+    "cc": 2,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::rows",
+    "line": 44,
+    "cc": 5,
+    "nloc": 36,
+    "length": 36
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::textCell",
+    "line": 81,
+    "cc": 2,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::writeRow",
+    "line": 90,
+    "cc": 2,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::csv",
+    "line": 97,
+    "cc": 6,
+    "nloc": 40,
+    "length": 40
+  },
+  {
+    "file": "src/CatalogExport.php",
+    "name": "CatalogExport::download",
+    "line": 138,
+    "cc": 5,
+    "nloc": 24,
+    "length": 24
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::issue",
+    "line": 12,
+    "cc": 7,
+    "nloc": 40,
+    "length": 47
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::copyIssueError",
+    "line": 60,
+    "cc": 5,
+    "nloc": 16,
+    "length": 16
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::readerIssueError",
+    "line": 77,
+    "cc": 5,
+    "nloc": 27,
+    "length": 30
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::reservationForIssue",
+    "line": 108,
+    "cc": 5,
+    "nloc": 23,
+    "length": 24
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::dueDateForCategory",
+    "line": 133,
+    "cc": 6,
+    "nloc": 20,
+    "length": 21
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::returnBook",
+    "line": 158,
+    "cc": 6,
+    "nloc": 30,
+    "length": 33
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::reserve",
+    "line": 192,
+    "cc": 2,
+    "nloc": 15,
+    "length": 15
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::activeLoans",
+    "line": 208,
+    "cc": 1,
+    "nloc": 12,
+    "length": 12
+  },
+  {
+    "file": "src/LoanService.php",
+    "name": "LoanService::userLoans",
+    "line": 221,
+    "cc": 1,
+    "nloc": 12,
+    "length": 12
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "e",
+    "line": 3,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "redirect",
+    "line": 8,
+    "cc": 1,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "json_response",
+    "line": 15,
+    "cc": 1,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "json_error",
+    "line": 23,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "render",
+    "line": 28,
+    "cc": 1,
+    "nloc": 9,
+    "length": 9
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "flash",
+    "line": 38,
+    "cc": 2,
+    "nloc": 10,
+    "length": 10
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "format_date",
+    "line": 49,
+    "cc": 2,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "plural",
+    "line": 57,
+    "cc": 6,
+    "nloc": 9,
+    "length": 9
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "input",
+    "line": 67,
+    "cc": 3,
+    "nloc": 10,
+    "length": 10
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "request_json",
+    "line": 78,
+    "cc": 2,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/helpers.php",
+    "name": "old_format_date",
+    "line": 86,
+    "cc": 2,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::__construct",
+    "line": 12,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::required",
+    "line": 17,
+    "cc": 3,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::email",
+    "line": 25,
+    "cc": 3,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::minLength",
+    "line": 33,
+    "cc": 3,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::maxLength",
+    "line": 41,
+    "cc": 3,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::in",
+    "line": 49,
+    "cc": 3,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::fails",
+    "line": 57,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::errors",
+    "line": 62,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/Validator.php",
+    "name": "Validator::first",
+    "line": 67,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::all",
+    "line": 5,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::find",
+    "line": 10,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::findByEmail",
+    "line": 15,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::setRole",
+    "line": 20,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::setBlocked",
+    "line": 25,
+    "cc": 2,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/UserRepository.php",
+    "name": "UserRepository::readers",
+    "line": 30,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::user",
+    "line": 5,
+    "cc": 3,
+    "nloc": 11,
+    "length": 11
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::check",
+    "line": 17,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::hasRole",
+    "line": 22,
+    "cc": 2,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::attempt",
+    "line": 31,
+    "cc": 4,
+    "nloc": 15,
+    "length": 15
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::register",
+    "line": 47,
+    "cc": 1,
+    "nloc": 17,
+    "length": 17
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::logout",
+    "line": 65,
+    "cc": 1,
+    "nloc": 5,
+    "length": 5
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::requireLogin",
+    "line": 71,
+    "cc": 2,
+    "nloc": 6,
+    "length": 6
+  },
+  {
+    "file": "src/Auth.php",
+    "name": "Auth::requireRole",
+    "line": 78,
+    "cc": 2,
+    "nloc": 9,
+    "length": 9
+  },
+  {
+    "file": "src/ReviewRepository.php",
+    "name": "ReviewRepository::forBook",
+    "line": 5,
+    "cc": 1,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/ReviewRepository.php",
+    "name": "ReviewRepository::add",
+    "line": 14,
+    "cc": 1,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/ReviewRepository.php",
+    "name": "ReviewRepository::delete",
+    "line": 22,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::search",
+    "line": 8,
+    "cc": 4,
+    "nloc": 18,
+    "length": 21
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::find",
+    "line": 30,
+    "cc": 2,
+    "nloc": 16,
+    "length": 16
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::availableCount",
+    "line": 47,
+    "cc": 1,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::genres",
+    "line": 56,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::create",
+    "line": 61,
+    "cc": 1,
+    "nloc": 15,
+    "length": 15
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::addCopy",
+    "line": 77,
+    "cc": 1,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::setCover",
+    "line": 85,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/BookRepository.php",
+    "name": "BookRepository::popular",
+    "line": 90,
+    "cc": 1,
+    "nloc": 12,
+    "length": 12
+  },
+  {
+    "file": "src/ReservationRepository.php",
+    "name": "ReservationRepository::active",
+    "line": 5,
+    "cc": 1,
+    "nloc": 11,
+    "length": 11
+  },
+  {
+    "file": "src/ReservationRepository.php",
+    "name": "ReservationRepository::forUser",
+    "line": 17,
+    "cc": 1,
+    "nloc": 11,
+    "length": 11
+  },
+  {
+    "file": "src/ReservationRepository.php",
+    "name": "ReservationRepository::cancel",
+    "line": 29,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "src/ReservationRepository.php",
+    "name": "ReservationRepository::queuePosition",
+    "line": 37,
+    "cc": 3,
+    "nloc": 15,
+    "length": 15
+  },
+  {
+    "file": "config/config.php",
+    "name": "load_env",
+    "line": 7,
+    "cc": 6,
+    "nloc": 18,
+    "length": 18
+  },
+  {
+    "file": "public/assets/js/book.js",
+    "name": "stars",
+    "line": 6,
+    "cc": 1,
+    "nloc": 3,
+    "length": 3
+  },
+  {
+    "file": "public/assets/js/book.js",
+    "name": "loadReviews",
+    "line": 10,
+    "cc": 4,
+    "nloc": 21,
+    "length": 21
+  },
+  {
+    "file": "public/assets/js/book.js",
+    "name": "(anonymous)",
+    "line": 34,
+    "cc": 3,
+    "nloc": 22,
+    "length": 22
+  },
+  {
+    "file": "public/assets/js/book.js",
+    "name": "(anonymous)",
+    "line": 60,
+    "cc": 3,
+    "nloc": 5,
+    "length": 5
+  },
+  {
+    "file": "public/assets/js/reservations.js",
+    "name": "(anonymous)",
+    "line": 3,
+    "cc": 3,
+    "nloc": 10,
+    "length": 10
+  },
+  {
+    "file": "public/assets/js/reservations.js",
+    "name": "(anonymous)",
+    "line": 2,
+    "cc": 1,
+    "nloc": 3,
+    "length": 12
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 4,
+    "cc": 2,
+    "nloc": 5,
+    "length": 5
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 3,
+    "cc": 1,
+    "nloc": 3,
+    "length": 7
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 12,
+    "cc": 2,
+    "nloc": 5,
+    "length": 5
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 11,
+    "cc": 1,
+    "nloc": 3,
+    "length": 7
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 20,
+    "cc": 4,
+    "nloc": 14,
+    "length": 14
+  },
+  {
+    "file": "public/assets/js/admin.js",
+    "name": "(anonymous)",
+    "line": 19,
+    "cc": 1,
+    "nloc": 3,
+    "length": 16
+  },
+  {
+    "file": "public/assets/js/api.js",
+    "name": "api",
+    "line": 4,
+    "cc": 8,
+    "nloc": 19,
+    "length": 19
+  },
+  {
+    "file": "public/assets/js/api.js",
+    "name": "escapeHtml",
+    "line": 24,
+    "cc": 2,
+    "nloc": 7,
+    "length": 7
+  },
+  {
+    "file": "public/assets/js/api.js",
+    "name": "formatDate",
+    "line": 32,
+    "cc": 2,
+    "nloc": 5,
+    "length": 5
+  },
+  {
+    "file": "public/assets/js/api.js",
+    "name": "showMessage",
+    "line": 38,
+    "cc": 2,
+    "nloc": 3,
+    "length": 3
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "(anonymous)",
+    "line": 10,
+    "cc": 2,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "loadReaders",
+    "line": 5,
+    "cc": 2,
+    "nloc": 8,
+    "length": 8
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "(anonymous)",
+    "line": 26,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "(anonymous)",
+    "line": 14,
+    "cc": 5,
+    "nloc": 17,
+    "length": 17
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "(anonymous)",
+    "line": 33,
+    "cc": 5,
+    "nloc": 11,
+    "length": 11
+  },
+  {
+    "file": "public/assets/js/librarian.js",
+    "name": "(anonymous)",
+    "line": 32,
+    "cc": 1,
+    "nloc": 3,
+    "length": 13
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "bookCard",
+    "line": 9,
+    "cc": 5,
+    "nloc": 18,
+    "length": 18
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 35,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "renderPager",
+    "line": 28,
+    "cc": 4,
+    "nloc": 11,
+    "length": 11
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "load",
+    "line": 40,
+    "cc": 4,
+    "nloc": 18,
+    "length": 18
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 59,
+    "cc": 1,
+    "nloc": 4,
+    "length": 4
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 64,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 65,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 89,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 108,
+    "cc": 1,
+    "nloc": 1,
+    "length": 1
+  },
+  {
+    "file": "public/assets/js/catalog.js",
+    "name": "(anonymous)",
+    "line": 73,
+    "cc": 6,
+    "nloc": 40,
+    "length": 40
+  }
+]

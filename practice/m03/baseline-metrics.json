@@ -1,0 +1,643 @@
+{
+  "commit": "69ffbdb0df13d4a9a81fd3cb8c7ba0e7600126dc",
+  "functions": [
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/book.js:6",
+      "name": "stars"
+    },
+    {
+      "complexity": 4,
+      "nloc": 21,
+      "location": "public/assets/js/book.js:10",
+      "name": "loadReviews"
+    },
+    {
+      "complexity": 3,
+      "nloc": 22,
+      "location": "public/assets/js/book.js:34",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 3,
+      "nloc": 5,
+      "location": "public/assets/js/book.js:60",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 3,
+      "nloc": 10,
+      "location": "public/assets/js/reservations.js:3",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/reservations.js:2",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 2,
+      "nloc": 5,
+      "location": "public/assets/js/admin.js:4",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/admin.js:3",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 2,
+      "nloc": 5,
+      "location": "public/assets/js/admin.js:12",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/admin.js:11",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 4,
+      "nloc": 14,
+      "location": "public/assets/js/admin.js:20",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/admin.js:19",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 8,
+      "nloc": 19,
+      "location": "public/assets/js/api.js:4",
+      "name": "api"
+    },
+    {
+      "complexity": 2,
+      "nloc": 7,
+      "location": "public/assets/js/api.js:24",
+      "name": "escapeHtml"
+    },
+    {
+      "complexity": 2,
+      "nloc": 5,
+      "location": "public/assets/js/api.js:32",
+      "name": "formatDate"
+    },
+    {
+      "complexity": 2,
+      "nloc": 3,
+      "location": "public/assets/js/api.js:38",
+      "name": "showMessage"
+    },
+    {
+      "complexity": 2,
+      "nloc": 1,
+      "location": "public/assets/js/librarian.js:10",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 2,
+      "nloc": 8,
+      "location": "public/assets/js/librarian.js:5",
+      "name": "loadReaders"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/librarian.js:26",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 5,
+      "nloc": 17,
+      "location": "public/assets/js/librarian.js:14",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 5,
+      "nloc": 11,
+      "location": "public/assets/js/librarian.js:33",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 3,
+      "location": "public/assets/js/librarian.js:32",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 5,
+      "nloc": 18,
+      "location": "public/assets/js/catalog.js:9",
+      "name": "bookCard"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/catalog.js:35",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 4,
+      "nloc": 11,
+      "location": "public/assets/js/catalog.js:28",
+      "name": "renderPager"
+    },
+    {
+      "complexity": 4,
+      "nloc": 18,
+      "location": "public/assets/js/catalog.js:40",
+      "name": "load"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "public/assets/js/catalog.js:59",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/catalog.js:64",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/catalog.js:65",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/catalog.js:89",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 1,
+      "nloc": 1,
+      "location": "public/assets/js/catalog.js:108",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 6,
+      "nloc": 40,
+      "location": "public/assets/js/catalog.js:73",
+      "name": "(anonymous)"
+    },
+    {
+      "complexity": 6,
+      "nloc": 18,
+      "location": "config/config.php:7",
+      "name": "load_env"
+    },
+    {
+      "complexity": 6,
+      "nloc": 40,
+      "location": "src/ReportService.php:8",
+      "name": "ReportService::debtors"
+    },
+    {
+      "complexity": 3,
+      "nloc": 23,
+      "location": "src/ReportService.php:52",
+      "name": "ReportService::debtorsCsv"
+    },
+    {
+      "complexity": 1,
+      "nloc": 9,
+      "location": "src/ReportService.php:76",
+      "name": "ReportService::stats"
+    },
+    {
+      "complexity": 3,
+      "nloc": 15,
+      "location": "src/Database.php:7",
+      "name": "Database::get"
+    },
+    {
+      "complexity": 1,
+      "nloc": 6,
+      "location": "src/Database.php:23",
+      "name": "Database::fetchAll"
+    },
+    {
+      "complexity": 2,
+      "nloc": 7,
+      "location": "src/Database.php:30",
+      "name": "Database::fetchOne"
+    },
+    {
+      "complexity": 1,
+      "nloc": 6,
+      "location": "src/Database.php:38",
+      "name": "Database::execute"
+    },
+    {
+      "complexity": 1,
+      "nloc": 6,
+      "location": "src/Database.php:45",
+      "name": "Database::insert"
+    },
+    {
+      "complexity": 9,
+      "nloc": 22,
+      "location": "src/CatalogExport.php:12",
+      "name": "CatalogExport::filters"
+    },
+    {
+      "complexity": 2,
+      "nloc": 8,
+      "location": "src/CatalogExport.php:35",
+      "name": "CatalogExport::stringValue"
+    },
+    {
+      "complexity": 5,
+      "nloc": 36,
+      "location": "src/CatalogExport.php:44",
+      "name": "CatalogExport::rows"
+    },
+    {
+      "complexity": 2,
+      "nloc": 8,
+      "location": "src/CatalogExport.php:81",
+      "name": "CatalogExport::textCell"
+    },
+    {
+      "complexity": 2,
+      "nloc": 6,
+      "location": "src/CatalogExport.php:90",
+      "name": "CatalogExport::writeRow"
+    },
+    {
+      "complexity": 6,
+      "nloc": 40,
+      "location": "src/CatalogExport.php:97",
+      "name": "CatalogExport::csv"
+    },
+    {
+      "complexity": 5,
+      "nloc": 24,
+      "location": "src/CatalogExport.php:138",
+      "name": "CatalogExport::download"
+    },
+    {
+      "complexity": 21,
+      "nloc": 97,
+      "location": "src/LoanService.php:12",
+      "name": "LoanService::issue"
+    },
+    {
+      "complexity": 6,
+      "nloc": 30,
+      "location": "src/LoanService.php:125",
+      "name": "LoanService::returnBook"
+    },
+    {
+      "complexity": 2,
+      "nloc": 15,
+      "location": "src/LoanService.php:159",
+      "name": "LoanService::reserve"
+    },
+    {
+      "complexity": 1,
+      "nloc": 12,
+      "location": "src/LoanService.php:175",
+      "name": "LoanService::activeLoans"
+    },
+    {
+      "complexity": 1,
+      "nloc": 12,
+      "location": "src/LoanService.php:188",
+      "name": "LoanService::userLoans"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/helpers.php:3",
+      "name": "e"
+    },
+    {
+      "complexity": 1,
+      "nloc": 6,
+      "location": "src/helpers.php:8",
+      "name": "redirect"
+    },
+    {
+      "complexity": 1,
+      "nloc": 7,
+      "location": "src/helpers.php:15",
+      "name": "json_response"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/helpers.php:23",
+      "name": "json_error"
+    },
+    {
+      "complexity": 1,
+      "nloc": 9,
+      "location": "src/helpers.php:28",
+      "name": "render"
+    },
+    {
+      "complexity": 2,
+      "nloc": 10,
+      "location": "src/helpers.php:38",
+      "name": "flash"
+    },
+    {
+      "complexity": 2,
+      "nloc": 7,
+      "location": "src/helpers.php:49",
+      "name": "format_date"
+    },
+    {
+      "complexity": 6,
+      "nloc": 9,
+      "location": "src/helpers.php:57",
+      "name": "plural"
+    },
+    {
+      "complexity": 3,
+      "nloc": 10,
+      "location": "src/helpers.php:67",
+      "name": "input"
+    },
+    {
+      "complexity": 2,
+      "nloc": 6,
+      "location": "src/helpers.php:78",
+      "name": "request_json"
+    },
+    {
+      "complexity": 2,
+      "nloc": 8,
+      "location": "src/helpers.php:86",
+      "name": "old_format_date"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/Validator.php:12",
+      "name": "Validator::__construct"
+    },
+    {
+      "complexity": 3,
+      "nloc": 7,
+      "location": "src/Validator.php:17",
+      "name": "Validator::required"
+    },
+    {
+      "complexity": 3,
+      "nloc": 7,
+      "location": "src/Validator.php:25",
+      "name": "Validator::email"
+    },
+    {
+      "complexity": 3,
+      "nloc": 7,
+      "location": "src/Validator.php:33",
+      "name": "Validator::minLength"
+    },
+    {
+      "complexity": 3,
+      "nloc": 7,
+      "location": "src/Validator.php:41",
+      "name": "Validator::maxLength"
+    },
+    {
+      "complexity": 3,
+      "nloc": 7,
+      "location": "src/Validator.php:49",
+      "name": "Validator::in"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/Validator.php:57",
+      "name": "Validator::fails"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/Validator.php:62",
+      "name": "Validator::errors"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/Validator.php:67",
+      "name": "Validator::first"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/UserRepository.php:5",
+      "name": "UserRepository::all"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/UserRepository.php:10",
+      "name": "UserRepository::find"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/UserRepository.php:15",
+      "name": "UserRepository::findByEmail"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/UserRepository.php:20",
+      "name": "UserRepository::setRole"
+    },
+    {
+      "complexity": 2,
+      "nloc": 4,
+      "location": "src/UserRepository.php:25",
+      "name": "UserRepository::setBlocked"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/UserRepository.php:30",
+      "name": "UserRepository::readers"
+    },
+    {
+      "complexity": 3,
+      "nloc": 11,
+      "location": "src/Auth.php:5",
+      "name": "Auth::user"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/Auth.php:17",
+      "name": "Auth::check"
+    },
+    {
+      "complexity": 2,
+      "nloc": 8,
+      "location": "src/Auth.php:22",
+      "name": "Auth::hasRole"
+    },
+    {
+      "complexity": 4,
+      "nloc": 15,
+      "location": "src/Auth.php:31",
+      "name": "Auth::attempt"
+    },
+    {
+      "complexity": 1,
+      "nloc": 17,
+      "location": "src/Auth.php:47",
+      "name": "Auth::register"
+    },
+    {
+      "complexity": 1,
+      "nloc": 5,
+      "location": "src/Auth.php:65",
+      "name": "Auth::logout"
+    },
+    {
+      "complexity": 2,
+      "nloc": 6,
+      "location": "src/Auth.php:71",
+      "name": "Auth::requireLogin"
+    },
+    {
+      "complexity": 2,
+      "nloc": 9,
+      "location": "src/Auth.php:78",
+      "name": "Auth::requireRole"
+    },
+    {
+      "complexity": 1,
+      "nloc": 8,
+      "location": "src/ReviewRepository.php:5",
+      "name": "ReviewRepository::forBook"
+    },
+    {
+      "complexity": 1,
+      "nloc": 7,
+      "location": "src/ReviewRepository.php:14",
+      "name": "ReviewRepository::add"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/ReviewRepository.php:22",
+      "name": "ReviewRepository::delete"
+    },
+    {
+      "complexity": 4,
+      "nloc": 18,
+      "location": "src/BookRepository.php:8",
+      "name": "BookRepository::search"
+    },
+    {
+      "complexity": 2,
+      "nloc": 16,
+      "location": "src/BookRepository.php:30",
+      "name": "BookRepository::find"
+    },
+    {
+      "complexity": 1,
+      "nloc": 8,
+      "location": "src/BookRepository.php:47",
+      "name": "BookRepository::availableCount"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/BookRepository.php:56",
+      "name": "BookRepository::genres"
+    },
+    {
+      "complexity": 1,
+      "nloc": 15,
+      "location": "src/BookRepository.php:61",
+      "name": "BookRepository::create"
+    },
+    {
+      "complexity": 1,
+      "nloc": 7,
+      "location": "src/BookRepository.php:77",
+      "name": "BookRepository::addCopy"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/BookRepository.php:85",
+      "name": "BookRepository::setCover"
+    },
+    {
+      "complexity": 1,
+      "nloc": 12,
+      "location": "src/BookRepository.php:90",
+      "name": "BookRepository::popular"
+    },
+    {
+      "complexity": 1,
+      "nloc": 11,
+      "location": "src/ReservationRepository.php:5",
+      "name": "ReservationRepository::active"
+    },
+    {
+      "complexity": 1,
+      "nloc": 11,
+      "location": "src/ReservationRepository.php:17",
+      "name": "ReservationRepository::forUser"
+    },
+    {
+      "complexity": 1,
+      "nloc": 4,
+      "location": "src/ReservationRepository.php:29",
+      "name": "ReservationRepository::cancel"
+    },
+    {
+      "complexity": 3,
+      "nloc": 15,
+      "location": "src/ReservationRepository.php:37",
+      "name": "ReservationRepository::queuePosition"
+    }
+  ],
+  "loc": {
+    "PHP": [
+      27,
+      1529,
+      43,
+      143
+    ],
+    "JavaScript": [
+      6,
+      282,
+      6,
+      25
+    ],
+    "CSS": [
+      1,
+      133,
+      6,
+      18
+    ],
+    "SQL": [
+      2,
+      104,
+      4,
+      14
+    ]
+  }
+}

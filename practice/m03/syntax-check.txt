@@ -1,0 +1,2 @@
+PASS: PHP 8.5.12, 27 files parsed
+PASS: both formatter outputs have identical PHP tokens except whitespace

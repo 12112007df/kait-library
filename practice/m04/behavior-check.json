@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-16",
+  "database": "isolated SQLite from original seed",
+  "comparison": "HTTP status, raw JSON and complete loans/copies/reservations tables",
+  "passed": 14,
+  "total": 14,
+  "scenarios": [
+    {
+      "name": "student",
+      "http": 200,
+      "ok": true,
+      "message": "Книга выдана до 30.11.2026",
+      "same_before_after": true
+    },
+    {
+      "name": "teacher_overdue",
+      "http": 200,
+      "ok": true,
+      "message": "Книга выдана до 16.12.2026",
+      "same_before_after": true
+    },
+    {
+      "name": "issued",
+      "http": 422,
+      "ok": false,
+      "message": "Экземпляр уже выдан",
+      "same_before_after": true
+    },
+    {
+      "name": "reserved",
+      "http": 422,
+      "ok": false,
+      "message": "Все свободные экземпляры забронированы другими читателями",
+      "same_before_after": true
+    },
+    {
+      "name": "unknown_reader",
+      "http": 422,
+      "ok": false,
+      "message": "Читатель не найден",
+      "same_before_after": true
+    },
+    {
+      "name": "blocked",
+      "http": 422,
+      "ok": false,
+      "message": "Читатель заблокирован",
+      "same_before_after": true
+    },
+    {
+      "name": "unknown_copy",
+      "http": 422,
+      "ok": false,
+      "message": "Экземпляр не найден",
+      "same_before_after": true
+    },
+    {
+      "name": "repair",
+      "http": 422,
+      "ok": false,
+      "message": "Экземпляр на ремонте",
+      "same_before_after": true
+    },
+    {
+      "name": "lost",
+      "http": 422,
+      "ok": false,
+      "message": "Экземпляр списан или утерян",
+      "same_before_after": true
+    },
+    {
+      "name": "student_overdue",
+      "http": 422,
+      "ok": false,
+      "message": "У читателя есть просроченные книги",
+      "same_before_after": true
+    },
+    {
+      "name": "student_at_limit",
+      "http": 200,
+      "ok": true,
+      "message": "Книга выдана до 30.11.2026",
+      "same_before_after": true
+    },
+    {
+      "name": "student_over_limit",
+      "http": 422,
+      "ok": false,
+      "message": "Превышен лимит книг на руках (5)",
+      "same_before_after": true
+    },
+    {
+      "name": "own_reservation",
+      "http": 200,
+      "ok": true,
+      "message": "Книга выдана до 30.11.2026",
+      "same_before_after": true
+    },
+    {
+      "name": "queue_with_spare",
+      "http": 200,
+      "ok": true,
+      "message": "Книга выдана до 30.11.2026",
+      "same_before_after": true
+    }
+  ]
+}

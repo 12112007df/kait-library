@@ -1,0 +1,15 @@
+
+PHP CODE SNIFFER VIOLATION SOURCE SUMMARY
+----------------------------------------------------------------------
+    SOURCE                                                       COUNT
+----------------------------------------------------------------------
+[x] Generic.ControlStructures.InlineControlStructure.NotAllowed  3
+[x] PSR12.Files.FileHeader.SpacingAfterTagBlock                  3
+[x] PSR12.Files.FileHeader.SpacingAfterDocblockBlock             2
+[x] Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen    1
+----------------------------------------------------------------------
+A TOTAL OF 9 SNIFF VIOLATIONS WERE FOUND IN 4 SOURCES
+----------------------------------------------------------------------
+PHPCBF CAN FIX THE 4 MARKED SOURCES AUTOMATICALLY (9 VIOLATIONS IN TOTAL)
+----------------------------------------------------------------------
+

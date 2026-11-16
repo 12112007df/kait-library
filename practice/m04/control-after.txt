@@ -1,0 +1,15 @@
+student 200 {'ok': True, 'message': 'Книга выдана до 30.11.2026', 'due_at': '2026-11-30', 'warnings': []}
+teacher_overdue 200 {'ok': True, 'message': 'Книга выдана до 16.12.2026', 'due_at': '2026-12-16', 'warnings': ['У читателя есть просроченные книги (1)']}
+issued 422 {'ok': False, 'message': 'Экземпляр уже выдан'}
+reserved 422 {'ok': False, 'message': 'Все свободные экземпляры забронированы другими читателями'}
+unknown_reader 422 {'ok': False, 'message': 'Читатель не найден'}
+blocked 422 {'ok': False, 'message': 'Читатель заблокирован'}
+unknown_copy 422 {'ok': False, 'message': 'Экземпляр не найден'}
+repair 422 {'ok': False, 'message': 'Экземпляр на ремонте'}
+lost 422 {'ok': False, 'message': 'Экземпляр списан или утерян'}
+student_overdue 422 {'ok': False, 'message': 'У читателя есть просроченные книги'}
+student_at_limit 200 {'ok': True, 'message': 'Книга выдана до 30.11.2026', 'due_at': '2026-11-30', 'warnings': []}
+student_over_limit 422 {'ok': False, 'message': 'Превышен лимит книг на руках (5)'}
+own_reservation 200 {'ok': True, 'message': 'Книга выдана до 30.11.2026', 'due_at': '2026-11-30', 'warnings': []}
+queue_with_spare 200 {'ok': True, 'message': 'Книга выдана до 30.11.2026', 'due_at': '2026-11-30', 'warnings': []}
+PASS: 14/14 scenarios match before, including raw JSON and full database state

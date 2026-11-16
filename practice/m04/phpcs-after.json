@@ -1,0 +1,144 @@
+{
+  "totals": {
+    "errors": 0,
+    "warnings": 0,
+    "fixable": 0
+  },
+  "files": {
+    "src/CatalogExport.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/ReviewRepository.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/ReportService.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/ReservationRepository.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/Validator.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/Auth.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/BookRepository.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/UserRepository.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/bootstrap.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/helpers.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/LoanService.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "src/Database.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "public/api.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "public/index.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "config/config.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/register.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/error.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/layout.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/reservations.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/book.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/librarian.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/admin_books.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/debtors.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/admin_users.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/profile.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/login.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    },
+    "templates/catalog.php": {
+      "errors": 0,
+      "warnings": 0,
+      "messages": []
+    }
+  }
+}

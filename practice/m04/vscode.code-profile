@@ -1,0 +1,5 @@
+{
+  "name": "ПП03",
+  "settings": "{\"settings\": \"{\\n    \\\"files.encoding\\\": \\\"utf8\\\",\\n    \\\"files.eol\\\": \\\"\\\\n\\\",\\n    \\\"files.insertFinalNewline\\\": true,\\n    \\\"files.trimTrailingWhitespace\\\": true,\\n    \\\"editor.insertSpaces\\\": true,\\n    \\\"editor.tabSize\\\": 4,\\n    \\\"editor.detectIndentation\\\": false,\\n    \\\"editor.rulers\\\": [\\n        120\\n    ],\\n    \\\"[php]\\\": {\\n        \\\"editor.defaultFormatter\\\": \\\"bmewburn.vscode-intelephense-client\\\"\\n    },\\n    \\\"intelephense.format.braces\\\": \\\"psr12\\\",\\n    \\\"files.exclude\\\": {\\n        \\\"**/.git\\\": true\\n    },\\n    \\\"search.exclude\\\": {\\n        \\\"public/uploads/**\\\": true\\n    }\\n}\"}",
+  "extensions": "[{\"identifier\": {\"id\": \"bmewburn.vscode-intelephense-client\"}, \"displayName\": \"PHP Intelephense\", \"applicationScoped\": false}, {\"identifier\": {\"id\": \"editorconfig.editorconfig\"}, \"displayName\": \"EditorConfig\", \"applicationScoped\": false}, {\"identifier\": {\"id\": \"xdebug.php-debug\"}, \"displayName\": \"PHP Debug\", \"applicationScoped\": false}]"
+}

@@ -1,0 +1,43 @@
+{
+  "catalog_http": 200,
+  "catalog_ok": true,
+  "catalog_items_on_first_page": 6,
+  "librarian_login_http": 200,
+  "librarian_page_http": 200,
+  "librarian_ui_present": true,
+  "database": "separate SQLite kait-check-data/library.sqlite",
+  "instructions": "CONTRIBUTING.md",
+  "phpcs_totals": {
+    "errors": 0,
+    "warnings": 0,
+    "fixable": 0
+  },
+  "started_at_utc": "2026-11-16T14:19:22.420349+00:00",
+  "finished_at_utc": "2026-11-16T14:27:52.621919+00:00",
+  "elapsed_minutes": 8.5,
+  "profile": "Проверка",
+  "separate_user_data_directory": true,
+  "extensions_initially_empty": true,
+  "extensions_installed_from_project": [
+    "bmewburn.vscode-intelephense-client@1.18.5",
+    "editorconfig.editorconfig@0.18.2",
+    "xdebug.php-debug@1.40.2"
+  ],
+  "marketplace_gui": "Failed to fetch; same three recommendations installed through official CLI",
+  "formatted_files": [
+    "src/Database.php",
+    "src/Validator.php",
+    "src/ReviewRepository.php",
+    "src/ReservationRepository.php",
+    "src/bootstrap.php"
+  ],
+  "revision": "d80c0bb28ce1caea8612e53d8f7279456335a233",
+  "git_status_short": "",
+  "git_diff_exit_code": 0,
+  "git_diff_check_exit_code": 0,
+  "phpcs_after_format": {
+    "errors": 0,
+    "warnings": 0,
+    "fixable": 0
+  }
+}

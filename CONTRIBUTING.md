@@ -62,9 +62,19 @@ php -S 127.0.0.1:8085 -t public
 
 `.editorconfig` задаёт UTF-8, LF, четыре пробела, финальный перевод строки и удаление пробелов в конце строк. Markdown сохраняет конечные пробелы для переноса строк; `.cmd` и `.bat` сохраняются с CRLF в рабочей папке. `.gitattributes` хранит текст в Git с LF и задаёт отдельные правила для Windows-скриптов и двоичных файлов.
 
-Профиль `practice/m04/vscode.code-profile` можно импортировать через Profiles → Import Profile. Для работы с кодом достаточно проектных файлов и рекомендованных расширений; вход в аккаунт и Settings Sync не требуются.
+Очищенный профиль `practice/m04/vscode.code-profile` содержит только переносимые настройки и три рекомендуемых расширения; служебное состояние IDE в него не включено. Его можно импортировать через Profiles → Import Profile. Для работы с кодом достаточно проектных файлов и рекомендованных расширений; вход в аккаунт и Settings Sync не требуются.
 
 В NetBeans откройте PHP-проект из `nbproject/`. В Properties → Formatting выберите проектные настройки: четыре пробела, Expand Tabs to Spaces. NetBeans не читает `.editorconfig`, поэтому соответствующие правила продублированы в `nbproject/project.properties`. Личные настройки `nbproject/private/` исключены из Git. Экспорт `practice/m04/netbeans-settings.zip` импортируется через Tools → Options → Import; выбирайте только параметры редактора. После импорта проверьте свойства проекта.
+
+Если вкладка расширений сообщает `Failed to fetch`, проверьте доступ к Marketplace. Список рекомендаций остаётся в `.vscode/extensions.json`; те же расширения можно установить официальным CLI в текущий проверочный профиль:
+
+```sh
+code --profile Проверка --install-extension bmewburn.vscode-intelephense-client
+code --profile Проверка --install-extension EditorConfig.EditorConfig
+code --profile Проверка --install-extension xdebug.php-debug
+```
+
+После установки выполните Developer: Reload Window и снова откройте PHP-файл. Не копируйте пользовательские настройки из рабочего профиля.
 
 Пути к PHP, JDK, браузеру и локальной БД задаются на своём компьютере. Они не должны попадать в `.vscode/`, профиль для передачи команде или общие свойства проекта.
 

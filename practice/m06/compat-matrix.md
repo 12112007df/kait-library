@@ -65,6 +65,8 @@ FrankenPHP 1.13.4, PHP 8.5.12, демонстрационная SQLite, localhos
 
 Headless Chromium не собрал кадры загрузки (`NO_SCREENSHOTS`), поэтому балл производительности отсутствует. Зафиксированы три замечания: недостаточный цветовой контраст, отсутствующие подписи у выпадающих списков и отсутствие meta description.
 
+Скриншоты отчётов Lighthouse: [Desktop](screenshots/lighthouse-desktop.png) и [Mobile](screenshots/lighthouse-mobile.png). Повторный аудит Desktop с программным рендерингом SwiftShader и фактическим сетевым режимом также вернул `NO_SCREENSHOTS`. Балл производительности отсутствует.
+
 Скриншоты Firefox: [каталог](screenshots/Firefox-catalog.png) и [поиск при ширине 375 px](screenshots/Firefox-375.png).
 
 ## Повторная проверка Firefox и прогон Chromium

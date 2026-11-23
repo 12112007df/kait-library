@@ -113,7 +113,7 @@ Chromium запускался с параметром `--single-process`. Раз
 
 | Сборка | Speedometer Next | JetStream | MotionMark |
 |---|---:|---|---|
-| Firefox 153.0 | [11,5](screenshots/Firefox-Speedometer.png) | Тайм-аут 110 с | Тайм-аут 110 с |
+| Firefox 153.0 | [11,5](Firefox-Speedometer.png) | Тайм-аут 110 с | Тайм-аут 110 с |
 | Chromium 153.0.8010.0 | [16,7](screenshots/Chromium-Speedometer.png) | Процесс закрылся при переходе к тесту | Нет результата |
 
 Числа относятся к этим сборкам и настройкам. Итоговые баллы по бенчмаркам остаются пустыми до полного сравнения.
